@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="generate" type="id" />
+    <item name="welcome" type="id" />
+    <item name="cat" type="id" />
+    <item name="dog" type="id" />
+    <item name="catButton" type="id" />
+    <item name="dogButton" type="id" />
+</resources>

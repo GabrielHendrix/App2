@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Frases de cachorros e gatos</string>
+    <string name="welcome_text">Olá</string>
+    <string name="load_name">GUARDAR</string>
+    <string name="name">Digite seu nome</string>
+    <string name="generate">GERAR OUTRA FRASE</string>
+    <string name="cat_phrase">Opção gato selecionada</string>
+    <string name="dog_phrase">Opção cão selecionada</string>
+</resources>

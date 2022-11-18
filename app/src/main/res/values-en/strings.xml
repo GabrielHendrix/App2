@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Cats and Dogs phrases</string>
+    <string name="welcome_text">Hello</string>
+    <string name="load_name">LOAD</string>
+    <string name="name">Enter your name</string>
+    <string name="generate">GENERATE NEW PHRASE</string>
+    <string name="cat_phrase">Cat option selected</string>
+    <string name="dog_phrase">Dog option selected</string>
+</resources>
