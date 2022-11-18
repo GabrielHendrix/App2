@@ -48,6 +48,12 @@ class Activity2 : AppCompatActivity() , View.OnClickListener, View.OnLongClickLi
                 setObserver()
         }
         private fun setObserver() {
+                VM2.getPostText().observe(this, Observer {
+                        if(it != "")
+                                binding.name.text = it
+                        else
+                                binding.name.text = " "
+                })
                 VM2.isCat().observe(this, Observer {
                         if(it){
                                 cat = true
@@ -86,7 +92,20 @@ class Activity2 : AppCompatActivity() , View.OnClickListener, View.OnLongClickLi
 
                 }
                 if (view.id == R.id.generate){
-                        binding.name.setText(VM2.getPhrase())
+//                        binding.name.setText(VM2.getPhrase())
+                        var postId: String = ""
+                        if (cat)
+                        {
+                                postId = (0 until 49).random().toString()
+                        }
+                        else if (dog)
+                        {
+                                postId = (50 until 99).random().toString()
+                        }
+                        if (postId == "")
+                                Toast.makeText(this, "empty", Toast.LENGTH_SHORT).show()
+                        else
+                                VM2.requestNewBlogPost(postId)
                 }
         }
         override fun onLongClick(view: View): Boolean {
