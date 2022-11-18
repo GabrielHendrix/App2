@@ -50,7 +50,7 @@ class Activity2 : AppCompatActivity() , View.OnClickListener, View.OnLongClickLi
         private fun setObserver() {
                 VM2.getPostText().observe(this, Observer {
                         if(it != "")
-                                binding.name.text = it
+                                binding.name.setText(it)
                         else
                                 binding.name.text = " "
                 })
@@ -96,11 +96,11 @@ class Activity2 : AppCompatActivity() , View.OnClickListener, View.OnLongClickLi
                         var postId: String = ""
                         if (cat)
                         {
-                                postId = (0 until 49).random().toString()
+                                postId = (1 until 60).random().toString()
                         }
                         else if (dog)
                         {
-                                postId = (50 until 99).random().toString()
+                                postId = (61 until 120).random().toString()
                         }
                         if (postId == "")
                                 Toast.makeText(this, "empty", Toast.LENGTH_SHORT).show()

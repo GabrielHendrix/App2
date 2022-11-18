@@ -7,7 +7,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.MutableLiveData
 import com.example.app2.mvvm.ui.Activity2
-import com.example.mvvm.repository.CatRepository
 import com.example.app2.mvvm.repository.Preferences
 import com.example.app2.mvvm.repository.api.model.BlogPostEntity
 import com.example.app2.mvvm.repository.api.client.ClientRetrofit
@@ -31,7 +30,7 @@ class ViewModel2: ViewModel() {
                 call: Call<BlogPostEntity>,
                 response: Response<BlogPostEntity>
             ) {
-                postText.value = response.body()?.id.toString()
+                postText.value = response.body()?.body
             }
 
             override fun onFailure(call: Call<BlogPostEntity>, t: Throwable) {
