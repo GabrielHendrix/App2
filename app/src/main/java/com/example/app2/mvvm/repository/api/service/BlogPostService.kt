@@ -7,6 +7,9 @@ import retrofit2.http.Path
 
 interface BlogPostService {
 
-    @GET("posts/{postId}")
-    fun getSinglePost(@Path("postId")postId: String): Call<BlogPostEntity>
+    @GET("cats/{postId}")
+    fun getSingleCatPost(@Path("postId")postId: String): Call<BlogPostEntity>
+
+    @GET("dogs/{postId}")
+    fun getSingleDogPost(@Path("postId")postId: String): Call<BlogPostEntity>
 }

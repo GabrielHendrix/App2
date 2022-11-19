@@ -24,13 +24,16 @@ class ViewModel2: ViewModel() {
 
     fun requestNewBlogPost(id: String) {
         val apiBlogService = ClientRetrofit.createService(BlogPostService::class.java)
-        val blogPost: Call<BlogPostEntity> = apiBlogService.getSinglePost(id)
+        var blogPost: Call<BlogPostEntity> = apiBlogService.getSingleCatPost(id)
+        if (dog.value == true)
+            blogPost = apiBlogService.getSingleDogPost(id)
+
         blogPost.enqueue(object : Callback<BlogPostEntity> {
             override fun onResponse(
                 call: Call<BlogPostEntity>,
                 response: Response<BlogPostEntity>
             ) {
-                postText.value = response.body()?.body
+                postText.value = id + "_" + response.body()?.body
             }
 
             override fun onFailure(call: Call<BlogPostEntity>, t: Throwable) {

@@ -4,6 +4,7 @@
     <string name="welcome_text">Hello</string>
     <string name="load_name">LOAD</string>
     <string name="name">Enter your name</string>
+    <string name="getById">Search</string>
     <string name="generate">GENERATE NEW PHRASE</string>
     <string name="cat_phrase">Cat option selected</string>
     <string name="dog_phrase">Dog option selected</string>
